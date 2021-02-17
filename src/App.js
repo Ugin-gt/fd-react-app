@@ -3,25 +3,19 @@ import SingInForm from './components/SingInForm'
 import StopWatch from './components/StopWatch';
 import Aloha from './components/Aloha';
 import Counter from './components/Counter';
+import MyCalendar from './components/MyCalendar';
+
 
 function App(props) {
-  const [isVisible, setIsVisible] = useState(true);
+
+
   return (
     <>
-     <Counter name='Counter' step={10}/>
-
-     <SingInForm name='SingInForm'/>
-     
-      <button
-        onClick={() => {
-          setIsVisible(!isVisible);
-        }}
-      >
-        SHOW\HIDE STOPWATCH
-      </button>
-      <Aloha name='Aloha' />
-      {isVisible ? <StopWatch /> : null}
+      <Counter name='Counter' step={10} />
+      <MyCalendar name='MyCalendar' />
     </>
+
+
   );
 }
 
