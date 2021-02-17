@@ -9,16 +9,19 @@ class Counter extends Component {
 
   handleClick = () => {
     this.setState((state, props) => {
-      return state.isAdd ? (state.count + props.step) : (state.count - props.step)
-        
-        });
+      return {
+        count: state.isAdd
+          ? state.count + props.step
+          : state.count - props.step,
+      };
+    });
   };
 
   changeMode = () => {
-    this.setState((state) => { 
-     return {isAdd: !state.isAdd} 
-  })
-}
+    this.setState((state) => {
+      return { isAdd: !state.isAdd };
+    });
+  };
 
   render() {
     const { count, isAdd } = this.state;
@@ -28,8 +31,13 @@ class Counter extends Component {
         <h1 className={styles.count}>Текущий счет {count}</h1>
         <div className={styles.count}> Шаг вычисления {step}</div>
         <div>
-        <button className={styles.btn}onClick={this.handleClick}> {isAdd?'Добавление':'Вычитание'}</button>
-          <button className={styles.btn} onClick={this.changeMode}>Режим вычисления</button>
+          <button className={styles.btn} onClick={this.handleClick}>
+            {' '}
+            {isAdd ? 'Добавление' : 'Вычитание'}
+          </button>
+          <button className={styles.btn} onClick={this.changeMode}>
+            Режим вычисления
+          </button>
         </div>
       </article>
     );
