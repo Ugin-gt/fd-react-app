@@ -8,7 +8,7 @@ function App(props) {
   const [isVisible, setIsVisible] = useState(true);
   return (
     <>
-     <Counter name='Counter' step={<input type="text"></input>}/>
+     <Counter name='Counter' step={10}/>
 
      <SingInForm name='SingInForm'/>
      
