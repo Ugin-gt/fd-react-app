@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './SignInForm.module.css';
+import styles from './SignInForm.module.scss';
 import cx from 'classnames';
 
 class SignInForm extends Component {
