@@ -1,5 +1,5 @@
 import React from 'react';
-import { addMonths, getWeek, parse, format } from 'date-fns';
+import { addMonths, getWeek, parse, format, startOfWeek} from 'date-fns';
 import Week from '../Week';
 import Month from '../Month';
 import styles from './CalendarBody.module.css';
@@ -14,9 +14,18 @@ const CalendarBody = (props) => {
       </>
     );
   };
-
-  console.log(getWeek(currentDay)); // Определяет число недели в году
+  console.log(format(startOfWeek(currentDay),'EEEEEE'));
   const WeekDays = () => {
+//   const nameOfwDay =[]
+//     for (let i = 0; i < 7; i++) {
+
+//       nameOfwDay.push(
+//       <WeekDays key={`${i}`} weekDay={format(startOfWeek(currentDay),'EEEEEE')} />
+//     );
+//   }
+
+//   return <tr>{[nameOfwDay]}</tr>;
+// };
     return (
       <tr>
         <td>Sun</td>
@@ -29,6 +38,7 @@ const CalendarBody = (props) => {
       </tr>
     );
   };
+  
 
   return (
     <div className={styles.calendarBody}>
