@@ -1,0 +1,13 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  > div {
+    display: flex;
+    justify-content: inherit;
+    align-items: inherit;
+    color: lawngreen;
+    object-position: center;
+
+  }
+}
