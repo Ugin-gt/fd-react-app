@@ -13,8 +13,8 @@ class Calendar extends Component {
   
   render () {
     return (
-      <div>
-        <CurrentDay className={styles.currentDay} currentDay={this.state.currentDay} />
+      <div className={styles.calendar}>
+        <CurrentDay currentDay={this.state.currentDay} />
         <CalendarBody currentDay={this.state.currentDay} />
       </div>
     );

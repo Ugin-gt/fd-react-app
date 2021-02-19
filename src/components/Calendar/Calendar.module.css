@@ -1,8 +1,11 @@
-.currentDay {
+.calendar {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: large;
-  color: aqua;
-
+  flex-direction: row;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border: 7px solid rgb(0, 140, 133);
 }

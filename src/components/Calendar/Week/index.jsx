@@ -4,11 +4,7 @@ import Day from '../Day';
 
 
 const Week = props => {
-  /* 
-    1. Число недели  в году
-    2. Объект начала недели
-  */
-
+  
   const { year, week } = props;
 
   const startOfWeek = parse(`${year} ${week}`, 'Y w', new Date());
