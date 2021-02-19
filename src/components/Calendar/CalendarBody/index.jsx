@@ -18,26 +18,14 @@ const WeekDays = (props) => {
 const CurrentMonth = (props) => {
   return (
     <>
-      {format(props.currentDay, 'MMMM').toUpperCase()}{' '}
+      {format(props.currentDay, 'MMMM').toUpperCase()}
       {format(props.currentDay, 'y')}
     </>
   );
 };
 
 const CalendarBody = (props) => {
-  const { currentDay } = props; // ОБъект Date
-
-  //   return (
-  //     <tr>
-  //       <td>Sun</td>
-  //       <td>Mon</td>
-  //       <td>Tue</td>
-  //       <td>Wed</td>
-  //       <td>Thu</td>
-  //       <td>Fri</td>
-  //       <td>Sat</td>
-  //     </tr>
-  //   );
+  const {currentDay } = props; // ОБъект Date
 
   return (
     <div className={styles.calendarBody}>
@@ -48,12 +36,8 @@ const CalendarBody = (props) => {
         <thead className={styles.weekDays}>
           <WeekDays currentDay={currentDay} />
         </thead>
-        <tbody className={styles.days}>
-          <Week year={2021} week={6} />
-          <Week year={2021} week={7} />
-          <Week year={2021} week={8} />
-          <Week year={2021} week={9} />
-          <Week year={2021} week={10} />
+        <tbody>
+          <Month year={2021} month={2} currentDay={currentDay}  />
         </tbody>
       </table>
     </div>

@@ -14,7 +14,7 @@ function App(props) {
     <>
       {/* <Counter name='Counter' step={10} /> */}
       <Calendar  />
-    <FlexContainer jc='center' ai='center' fd='column'>
+    {/* <FlexContainer jc='center' ai='center' fd='column'>
       <div>Content 1</div>
       <div>Content 2</div>
       <div>Content 3</div>
@@ -22,7 +22,7 @@ function App(props) {
       <div>Content 5</div>
       <div>Content 6</div>
 
-    </FlexContainer>
+    </FlexContainer> */}
     
     
     </>

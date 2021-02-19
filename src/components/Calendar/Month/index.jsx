@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { parse, getWeek, addWeeks, getYear, getWeeksInMonth } from 'date-fns';
 
 const Month = props => {
-  const { year, month } = props;
+  const { year, month, currentDay } = props;
   
   const startOfMonth = parse(`${year} ${month}`, 'y M', new Date());
   
@@ -17,6 +17,7 @@ const Month = props => {
     weekArray.push(
       <Week
         key={`${year}-${month}-${i}`}
+        currentDay={currentDay}
         year={getYear(startOfWeek)}
         week={getWeek(startOfWeek)}
       />
