@@ -1,22 +1,20 @@
 .calendarBody {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: white;
-  margin: 1.5rem;
+  padding: 1rem;
+  padding-bottom: 3rem;
 }
 
 .currentMonth {
   color: rgb(0, 140, 133);
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: bold;
-  margin: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .weekDays {
   color: rgb(235, 27, 87);
-  font-size: 1em;
-  font-weight: bold;
   border: 4px solid transparent;
-  padding: 5px;
+  text-align: center;
+  font-weight: bold;
 }

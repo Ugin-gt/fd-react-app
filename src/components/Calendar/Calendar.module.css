@@ -1,12 +1,15 @@
 .calendar {
-  box-sizing: border-box;
   display: flex;
-  flex-flow: row wrap;
-  margin: 0;
+  justify-content: row;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
   transform: translate(-50%, -50%);
   border: 10px solid rgb(0, 140, 133);
+}
+
+@media screen and (max-width: 575px) {
+  .calendar {
+    flex-direction: column;
+  }
 }
