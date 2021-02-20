@@ -1,6 +1,8 @@
 .day {
-  font-size: 1.2em;
+  font-size: 1em;
   color: transparent;
+  border: 4px solid transparent;
+  padding: 5px;
   text-align: center;
   font-weight: bold;
 }
@@ -11,7 +13,7 @@
 
 .currentDay {
   color:rgb(235, 27, 87);
-  border: 3px solid rgb(235, 27, 87);
+  border: 4px solid rgb(235, 27, 87);
   border-radius: 50%;
   padding: 5px;
 }

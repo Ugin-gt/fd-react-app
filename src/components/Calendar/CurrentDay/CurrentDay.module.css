@@ -1,19 +1,19 @@
 .currentDay {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content:center;  
   background-color: rgb(56, 206, 196);
 }
 
 div > .currentDayOfW {
-  margin-top: 2rem;
-  font-size: 1em;
-  color: whitesmoke;
-} 
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: white;
+}
 
 div > .currentDate {
   margin: 2rem;
-  font-size: 7em;
-  color: whitesmoke;
+  font-size: 8em;
+  color: white;
 }

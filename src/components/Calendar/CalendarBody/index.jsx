@@ -19,7 +19,7 @@ const CurrentMonth = (props) => {
   return (
     <>
       {format(props.currentDay, 'MMMM').toUpperCase()}
-      {format(props.currentDay, 'y')}
+      {format(props.currentDay, ' y')}
     </>
   );
 };
