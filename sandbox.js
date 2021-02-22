@@ -1,5 +1,5 @@
-function sayHi(hiStr = 'Hi', name) {
-  if(!name){
+function sayHi (hiStr = 'Hi', name) {
+  if (!name) {
     throw new Error();
   }
   return `${hiStr} ${name}`;

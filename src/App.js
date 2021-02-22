@@ -1,20 +1,17 @@
 import React, { Component, useState } from 'react';
-import SingInForm from './components/SingInForm'
+import SingInForm from './components/SingInForm';
 import StopWatch from './components/StopWatch';
 import Aloha from './components/Aloha';
 import Counter from './components/Counter';
 import Calendar from './components/Calendar';
 import FlexContainer from './components/FlexContainer';
 
-
-function App(props) {
-
-
+function App (props) {
   return (
     <>
       {/* <Counter name='Counter' step={10} /> */}
-      <Calendar  />
-    {/* <FlexContainer jc='center' ai='center' fd='column'>
+      <Calendar />
+      {/* <FlexContainer jc='center' ai='center' fd='column'>
       <div>Content 1</div>
       <div>Content 2</div>
       <div>Content 3</div>
@@ -23,11 +20,7 @@ function App(props) {
       <div>Content 6</div>
 
     </FlexContainer> */}
-    
-    
     </>
-
-
   );
 }
 

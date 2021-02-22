@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import UserCard from './UserCard';
 
 class UserList extends Component {
-  userSelector = (id) => {
+  userSelector = id => {
     const { users, setUsers } = this.props;
     const newUsers = [...users]; // Поверхностная копия
 
-    const mapNewUsers = (user) => ({
+    const mapNewUsers = user => ({
       ...user,
       isSelected: id === user.id ? !user.isSelected : user.isSelected,
     });
@@ -14,15 +14,11 @@ class UserList extends Component {
     setUsers(newUsers.map(mapNewUsers));
   };
 
-  mapUsers = (user) => (
-    <UserCard
-      key={user.id}
-      user={user}
-      userSelector={this.userSelector}
-    />
+  mapUsers = user => (
+    <UserCard key={user.id} user={user} userSelector={this.userSelector} />
   );
 
-  render() {
+  render () {
     const { users } = this.props;
     return (
       <section>

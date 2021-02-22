@@ -3,7 +3,7 @@ import styles from './Counter.module.css';
 import PropTypes from 'prop-types';
 
 class Counter extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = { count: 0, isAdd: true };
   }
@@ -19,12 +19,12 @@ class Counter extends Component {
   };
 
   changeMode = () => {
-    this.setState((state) => {
+    this.setState(state => {
       return { isAdd: !state.isAdd };
     });
   };
 
-  render() {
+  render () {
     const { count, isAdd } = this.state;
     const { step } = this.props;
     return (

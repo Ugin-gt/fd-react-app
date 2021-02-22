@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './FlexContainer.module.scss';
 
-const FlexContainer = (props) => {
+const FlexContainer = props => {
   const { children, jc, ai, fd } = props;
   const inlineStyles = {
     flexDirection: fd,

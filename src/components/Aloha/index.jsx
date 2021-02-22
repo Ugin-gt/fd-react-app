@@ -2,7 +2,7 @@ import { Component } from 'react';
 import styles from './Aloha.module.css';
 
 class Aloha extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = {
       isGreeting: true,
@@ -21,10 +21,10 @@ class Aloha extends Component {
     deleteUser(id);
   };
 
-  render() {
+  render () {
     const { isGreeting } = this.state;
     const { name, children, isExciting } = this.props;
-    console.log(styles)
+    console.log(styles);
     return (
       <div className={styles.container}>
         <h1 className='' onClick={this.switchGreeting}>
