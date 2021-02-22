@@ -4,7 +4,7 @@ import cx from 'classnames';
 import styles from './Day.module.scss';
 import PropTypes from 'prop-types';
 
-const Day = (props) => {
+const Day = props => {
   const { day, currentDay } = props;
 
   const classNames = cx(styles.day, {

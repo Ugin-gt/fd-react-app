@@ -6,7 +6,9 @@ const CurrentDay = props => {
   const { currentDay } = props; // ОБъект Date
   return (
     <div className={styles.currentDay}>
-      <div className={styles.currentDayOfW}>{format(currentDay, 'EEEE').toUpperCase()}</div>
+      <div className={styles.currentDayOfW}>
+        {format(currentDay, 'EEEE').toUpperCase()}
+      </div>
       <div className={styles.currentDate}>{format(currentDay, 'd')}</div>
     </div>
   );

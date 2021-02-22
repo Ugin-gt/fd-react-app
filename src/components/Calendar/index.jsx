@@ -10,7 +10,7 @@ class Calendar extends Component {
       currentDay: new Date(),
     };
   }
-  
+
   render () {
     return (
       <div className={styles.calendar}>

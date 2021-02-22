@@ -4,7 +4,7 @@ import Week from '../Week';
 import Month from '../Month';
 import styles from './CalendarBody.module.css';
 
-const WeekDays = (props) => {
+const WeekDays = props => {
   const nameOfwDay = [];
   const dayWeek = startOfWeek(props.currentDay);
   for (let i = 0; i < 7; i++) {
@@ -15,7 +15,7 @@ const WeekDays = (props) => {
   return <tr>{[nameOfwDay]}</tr>;
 };
 
-const CurrentMonth = (props) => {
+const CurrentMonth = props => {
   return (
     <>
       {format(props.currentDay, 'MMMM').toUpperCase()}
@@ -24,8 +24,8 @@ const CurrentMonth = (props) => {
   );
 };
 
-const CalendarBody = (props) => {
-  const {currentDay } = props; // ОБъект Date
+const CalendarBody = props => {
+  const { currentDay } = props; // ОБъект Date
 
   return (
     <div className={styles.calendarBody}>
@@ -37,7 +37,7 @@ const CalendarBody = (props) => {
           <WeekDays currentDay={currentDay} />
         </thead>
         <tbody>
-          <Month year={2021} month={2} currentDay={currentDay}  />
+          <Month year={2021} month={2} currentDay={currentDay} />
         </tbody>
       </table>
     </div>
