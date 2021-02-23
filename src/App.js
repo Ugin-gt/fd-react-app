@@ -6,25 +6,58 @@ import Counter from './components/Counter';
 import Calendar from './components/Calendar';
 import FlexContainer from './components/FlexContainer';
 import WindowSize from './components/WindowSize';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
-function App (props) {
+function App(props) {
   return (
-    <>
-      {/* <Counter name='Counter' step={10} /> */}
-      <Calendar />
-
-      <WindowSize />
-      {/* <FlexContainer jc='center' ai='center' fd='column'>
-      <div>Content 1</div>
-      <div>Content 2</div>
-      <div>Content 3</div>
-      <div>Content 4</div>
-      <div>Content 5</div>
-      <div>Content 6</div>
-
-    </FlexContainer> */}
-    </>
+    <BrowserRouter>
+      <nav>
+        <ul>
+          <li>
+            <Link to='/'>Home</Link>
+          </li>
+          <li>
+            <Link to='/about'>About</Link>
+          </li>
+          <li>
+            <Link to='/contacts'>Contacts</Link>
+          </li>
+          <li>
+            <Link to='/calendar'>Calendar</Link>
+          </li>
+          <li>
+            <Link to='/window'>Window Size</Link>
+          </li>
+        </ul>
+      </nav>
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route path='/contacts'>
+          <Contacts />
+        </Route>
+        <Route path='/calendar'>
+          <Calendar />
+        </Route>
+        <Route path='/window'>
+          <WindowSize />
+        </Route>
+        <Route path='/about'>
+          <About />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
+}
+const Home = () => {
+  return <div>Home Page</div>;
+}
+const Contacts = () => {
+  return <div>Contacts</div>;
+}
+const About = () => {
+  return <div>About</div>;
 }
 
 export default App;
