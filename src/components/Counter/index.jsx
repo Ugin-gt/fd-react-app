@@ -8,6 +8,12 @@ class Counter extends Component {
     this.state = { count: 0, isAdd: true };
   }
 
+  shouldComponentUpdate (nextProps, nextState) {
+    if (nextProps.step !== this.props.step) {
+      return false;
+    }
+    return true;
+  }
   handleClick = () => {
     this.setState((state, props) => {
       return {

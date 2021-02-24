@@ -2,13 +2,13 @@ import React, { Component, useState } from 'react';
 import SingInForm from './components/SingInForm';
 import StopWatch from './components/StopWatch';
 import Aloha from './components/Aloha';
-import Counter from './components/Counter';
+import CounterPage from './pages/CounterPage';
 import Calendar from './components/Calendar';
 import FlexContainer from './components/FlexContainer';
 import WindowSize from './components/WindowSize';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
-function App(props) {
+function App (props) {
   return (
     <BrowserRouter>
       <nav>
@@ -28,6 +28,9 @@ function App(props) {
           <li>
             <Link to='/window'>Window Size</Link>
           </li>
+          <li>
+            <Link to='/counter'>Counter</Link>
+          </li>
         </ul>
       </nav>
       <Switch>
@@ -43,6 +46,9 @@ function App(props) {
         <Route path='/window'>
           <WindowSize />
         </Route>
+        <Route path='/counter'>
+          <CounterPage />
+        </Route>
         <Route path='/about'>
           <About />
         </Route>
@@ -52,12 +58,12 @@ function App(props) {
 }
 const Home = () => {
   return <div>Home Page</div>;
-}
+};
 const Contacts = () => {
   return <div>Contacts</div>;
-}
+};
 const About = () => {
   return <div>About</div>;
-}
+};
 
 export default App;
