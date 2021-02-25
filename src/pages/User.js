@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { UserContext } from '../contexts';
-import UserCard from '../components/UserList/UserCard'
+import UserCard from '../components/UserList/UserCard';
 
-class  User extends Component {
+class User extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -27,9 +27,7 @@ class  User extends Component {
         </div>
       </UserContext.Provider>
     );
-  
   }
 }
 
 export default User;
-

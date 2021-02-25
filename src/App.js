@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React from 'react';
 import SingInForm from './components/SingInForm';
 import StopWatch from './components/StopWatch';
 import Aloha from './components/Aloha';
@@ -9,9 +9,7 @@ import WindowSize from './components/WindowSize';
 import User from './pages/User';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
-
-
-function App (props) {
+const App = props => {
   return (
     <BrowserRouter>
       <nav>
@@ -40,41 +38,25 @@ function App (props) {
         </ul>
       </nav>
       <Switch>
-        <Route exact path='/'>
-          <Home />
-        </Route>
-        <Route path='/contacts'>
-          <Contacts />
-        </Route>
-        <Route path='/calendar'>
-          <Calendar />
-        </Route>
-        <Route path='/window'>
-          <WindowSize />
-        </Route>
-        <Route path='/counter'>
-          <CounterPage />
-        </Route>
-        <Route path='/user'>
-          <User />
-        </Route>
-        <Route path='/about'>
-          <About />
-        </Route>
+        <Route exact path='/' component={Home} />
+
+        <Route path='/contacts' component={Contacts} />
+
+        <Route path='/calendar' component={Calendar} />
+
+        <Route path='/window' component={WindowSize} />
+
+        <Route path='/counter' component={CounterPage} />
+
+        <Route path='/user' component={User} />
+
+        <Route path='/about' component={About} />
       </Switch>
     </BrowserRouter>
   );
-}
-const Home = () => {
-  return <div>Home Page</div>;
 };
-const Contacts = () => {
-  return <div>Contacts</div>;
-};
-const About = () => {
-  return <div>About</div>;
-};
-
-
+const Home = () => <div>Home Page</div>;
+const Contacts = () => <div>Contacts Page</div>;
+const About = props => <div>About Page</div>;
 
 export default App;

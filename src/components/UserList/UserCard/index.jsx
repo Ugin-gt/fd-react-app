@@ -11,7 +11,7 @@ function UserCard (props) {
             Full Name: {user.firstName} {user.lastName}
           </h1>
           <div>ID:{user.id} {user.firstName} {user.lastName}
-           <img src="{user.imageSrc}" alt="UserFoto"/>
+           <img src={user.imageSrc} alt="UserFoto"/>
            </div>
         </article>
       )}
