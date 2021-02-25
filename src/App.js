@@ -6,7 +6,10 @@ import CounterPage from './pages/CounterPage';
 import Calendar from './components/Calendar';
 import FlexContainer from './components/FlexContainer';
 import WindowSize from './components/WindowSize';
+import User from './pages/User';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+
+
 
 function App (props) {
   return (
@@ -31,6 +34,9 @@ function App (props) {
           <li>
             <Link to='/counter'>Counter</Link>
           </li>
+          <li>
+            <Link to='/user'>UserPage</Link>
+          </li>
         </ul>
       </nav>
       <Switch>
@@ -49,6 +55,9 @@ function App (props) {
         <Route path='/counter'>
           <CounterPage />
         </Route>
+        <Route path='/user'>
+          <User />
+        </Route>
         <Route path='/about'>
           <About />
         </Route>
@@ -65,5 +74,7 @@ const Contacts = () => {
 const About = () => {
   return <div>About</div>;
 };
+
+
 
 export default App;
