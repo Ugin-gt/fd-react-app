@@ -59,7 +59,7 @@ class StopWatch extends Component {
     const { time, isRunning } = this.state;
     return (
       <article className={styles.container}>
-        <h1 className={styles.curretTime}>
+        <h1 className={styles.currentTime}>
           {time.toLocaleTimeString('it-IT')}
         </h1>
         <div className={styles.controls}>

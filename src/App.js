@@ -1,6 +1,7 @@
 import React from 'react';
 import SingInForm from './components/SingInForm';
 import StopWatch from './components/StopWatch';
+import UseEffectStopWatch from './components/UseEffectStopWatch';
 import Aloha from './components/Aloha';
 import CounterPage from './pages/CounterPage';
 import Calendar from './components/Calendar';
@@ -33,7 +34,7 @@ const App = props => {
             <Link to='/counter'>Counter</Link>
           </li>
           <li>
-            <Link to='/user'>UserPage</Link>
+            <Link to='/stop-watch'>UseEffectStopWatch</Link>
           </li>
         </ul>
       </nav>
@@ -49,6 +50,8 @@ const App = props => {
         <Route path='/counter' component={CounterPage} />
 
         <Route path='/user' component={User} />
+
+        <Route path='/stop-watch' component={UseEffectStopWatch} />
 
         <Route path='/about' component={About} />
       </Switch>
