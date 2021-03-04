@@ -1,22 +1,35 @@
-import React from 'react';
-import { UserContext } from '../../../contexts';
+import React, { useContext } from 'react';
+import { UserContext, ThemeContext } from '../../../contexts';
+import cx from 'classnames';
+import styles from './UserCard.module.scss';
 
-function UserCard (props) {
+const UserCard = props => {
+  const [user, setUser] = useContext(UserContext);
+  const [theme, setTheme] = useContext(ThemeContext);
+
+  const btnHandler = () => {
+    setTheme({ theme: !theme });
+  };
+
+  const classNames = cx(styles.container, {
+    [styles.lightTheme]: theme === 'lightTheme',
+    [styles.darkTheme]: theme !== 'lightTheme',
+  });
+
   return (
-    <UserContext.Consumer>
-      {user => (
-        <article>
-          {JSON.stringify(user)}
-          <h1>
-            Full Name: {user.firstName} {user.lastName}
-          </h1>
-          <div>ID:{user.id} {user.firstName} {user.lastName}
-           <img src={user.imageSrc} alt="UserFoto"/>
-           </div>
-        </article>
-      )}
-    </UserContext.Consumer>
+    <article className={classNames}>
+      <button className={styles.btn} onClick={btnHandler}>
+        Switch Theme
+      </button>
+      <h1>
+        Full Name: {user.firstName} {user.lastName}
+        <br /> Uid:{user.id}
+      </h1>
+      <div>
+        <img src={user.imageSrc} alt='UserFoto' />
+      </div>
+    </article>
   );
-}
+};
 
 export default UserCard;

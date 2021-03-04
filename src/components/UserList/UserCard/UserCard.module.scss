@@ -1,0 +1,20 @@
+.btn {
+  background-color: rgb(11, 146, 236);
+  outline: none;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.lightTheme {
+  background-color: white;
+  color: black;
+}
+
+.darkTheme {
+  background-color: black;
+  color: white;
+}
