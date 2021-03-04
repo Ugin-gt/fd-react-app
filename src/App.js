@@ -7,7 +7,7 @@ import CounterPage from './pages/CounterPage';
 import Calendar from './components/Calendar';
 import FlexContainer from './components/FlexContainer';
 import WindowSize from './components/WindowSize';
-import User from './pages/User';
+import UserCont from './pages/UserCont';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 const App = props => {
@@ -22,9 +22,6 @@ const App = props => {
             <Link to='/about'>About</Link>
           </li>
           <li>
-            <Link to='/contacts'>Contacts</Link>
-          </li>
-          <li>
             <Link to='/calendar'>Calendar</Link>
           </li>
           <li>
@@ -34,6 +31,9 @@ const App = props => {
             <Link to='/counter'>Counter</Link>
           </li>
           <li>
+            <Link to='/user-cont'>UserContext</Link>
+          </li>
+          <li>
             <Link to='/stop-watch'>UseEffectStopWatch</Link>
           </li>
         </ul>
@@ -41,15 +41,13 @@ const App = props => {
       <Switch>
         <Route exact path='/' component={Home} />
 
-        <Route path='/contacts' component={Contacts} />
+        <Route path='/user-cont' component={UserCont} />
 
         <Route path='/calendar' component={Calendar} />
 
         <Route path='/window' component={WindowSize} />
 
         <Route path='/counter' component={CounterPage} />
-
-        <Route path='/user' component={User} />
 
         <Route path='/stop-watch' component={UseEffectStopWatch} />
 
@@ -59,7 +57,6 @@ const App = props => {
   );
 };
 const Home = () => <div>Home Page</div>;
-const Contacts = () => <div>Contacts Page</div>;
 const About = props => <div>About Page</div>;
 
 export default App;
