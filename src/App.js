@@ -1,15 +1,15 @@
 import React, { useState, useReducer } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { MenuOpen } from '@material-ui/icons';
-import UseEffectStopWatch from './components/UseEffectStopWatch';
-import CounterPage from './pages/CounterPage';
-import Calendar from './components/Calendar';
-import WindowSize from './components/WindowSize';
-import UserCont from './pages/UserCont';
-import NavMenu from './components/NavMenu';
+import UseEffectStopWatch from 'components/UseEffectStopWatch';
+import CounterPage from 'pages/CounterPage';
+import Calendar from 'components/Calendar';
+import WindowSize from 'components/WindowSize';
+import UserCont from 'pages/UserCont';
+import NavMenu from 'components/NavMenu';
 import { THEMES, ACTIONS } from './constants';
-import { ThemeContext, AppContext } from './contexts';
-import reducer from './appReducer';
+import { ThemeContext, AppContext } from 'contexts';
+import reducer from 'appReducer';
 
 
 
