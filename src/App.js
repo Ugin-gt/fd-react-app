@@ -1,22 +1,41 @@
-import React from 'react';
-import SingInForm from './components/SingInForm';
-import StopWatch from './components/StopWatch';
+import React, { useState, useReducer } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { MenuOpen } from '@material-ui/icons';
 import UseEffectStopWatch from './components/UseEffectStopWatch';
-import Aloha from './components/Aloha';
 import CounterPage from './pages/CounterPage';
 import Calendar from './components/Calendar';
-import FlexContainer from './components/FlexContainer';
 import WindowSize from './components/WindowSize';
 import UserCont from './pages/UserCont';
-import NavigationMenu from './components/NavigationMenu';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import NavMenu from './components/NavMenu';
+import { THEMES, ACTIONS } from './constants';
+import { ThemeContext, AppContext } from './contexts';
+import reducer from './appReducer';
+
+
 
 const App = props => {
-  return (
-    <BrowserRouter>
-      {/* <button onClink={isOpen} > </button> */}
-      <NavigationMenu />
+  const themeState = useState(THEMES.LIGHT);
+  const [state, dispatch] = useReducer(reducer, {
+    isMenuOpen: false,
+  });
 
+  const openMenu = () => dispatch({ type: ACTIONS.MENU_OPEN });
+  const closeMenu = () => dispatch({ type: ACTIONS.MENU_CLOSE });
+
+  return (
+    <AppContext.Provider value={{ state, openMenu, closeMenu }}>
+      <ThemeContext.Provider value={themeState}>
+        <BrowserRouter>
+          <MenuOpen
+            onClick={openMenu}
+            onKeyDown={e => {
+              if (e.key === 'Enter') {
+                openMenu();
+              }
+            }}
+            tabIndex='0'
+            />
+          <NavMenu />
       <Switch>
         <Route exact path='/' component={Home} />
 
@@ -33,9 +52,11 @@ const App = props => {
         <Route path='/about' component={About} />
       </Switch>
     </BrowserRouter>
+    </ThemeContext.Provider>
+    </AppContext.Provider>
   );
 };
 const Home = () => <div>Home Page</div>;
-const About = props => <div>About Page</div>;
+const About = () => <div>About Page</div>;
 
 export default App;
