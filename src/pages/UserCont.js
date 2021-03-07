@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { UserContext, ThemeContext } from '../contexts';
 import UserCard from '../components/UserList/UserCard';
+import {THEMES} from '../constants';
+
+
 
 const UserCont = props => {
-  const themeState = useState ('lightTheme');
+  const themeState = useState (THEMES.LIGHT);
   const setUser = useState({
     id: 10,
     firstName: 'Jason',

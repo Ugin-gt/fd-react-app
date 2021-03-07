@@ -9,6 +9,15 @@
   cursor: pointer;
 }
 
+.input{
+  background-color: rgb(11, 146, 236);
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 6px;
+  outline: none;
+  border: 2px solid transparent;
+}
+
 .lightTheme {
   background-color: white;
   color: black;
