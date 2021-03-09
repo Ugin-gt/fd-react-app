@@ -39,6 +39,6 @@ export const SIGN_UP_SCHEMA = Yup.object({
 
 export const TODO_SCHEMA = Yup.object({
   todoBody: Yup.string()
-    .todoBody('Task must not be empty')
+  .min(3, 'Too Short! Or Task Todo must not be empty.')
     .required(),
 });

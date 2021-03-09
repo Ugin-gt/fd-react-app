@@ -36,11 +36,11 @@ const FormTODO = props => {
             )}
           </Field>
 
-          <Field name='email'>
+          <Field name='todoBody' type='text' component='div' >
             {fieldProps => <Input {...fieldProps} placeholder='Enter Email' />}
           </Field>
         </div>
-
+ 
         <Field
           className={styles.createAcc}
           type='submit'
