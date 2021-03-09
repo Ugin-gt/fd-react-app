@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import {  Close } from '@material-ui/icons';
+import { Close } from '@material-ui/icons';
 import { NavLink, Link } from 'react-router-dom';
 import cx from 'classnames';
 import styles from './NavMenu.module.scss';
@@ -56,6 +56,9 @@ const NavMenu = props => {
           </li>
           <li>
             <Link to='/counter'>Counter</Link>
+          </li>
+          <li>
+            <Link to='/todolist'>Your ToDO List</Link>
           </li>
           <li>
             <Link to='/user-cont'>UserContext</Link>
