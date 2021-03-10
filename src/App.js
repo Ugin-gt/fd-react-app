@@ -6,7 +6,7 @@ import CounterPage from 'pages/CounterPage';
 import Calendar from 'components/Calendar';
 import WindowSize from 'components/WindowSize';
 import UserCont from 'pages/UserCont';
-import Todolist from 'pages/Todolist';
+import Todo from 'pages/TodoApp/Todo';
 import NavMenu from 'components/NavMenu';
 import { THEMES, ACTIONS } from './constants';
 import { ThemeContext, AppContext } from 'contexts';
@@ -48,7 +48,7 @@ const App = props => {
 
         <Route path='/counter' component={CounterPage} />
 
-        <Route path='/todolist' component={Todolist} />
+        <Route path='/todolist' component={Todo} />
 
         <Route path='/stop-watch' component={UseEffectStopWatch} />
 
